@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Loginpage.css">
+    <link rel="icon" type="image/x-icon" href="Images/Fruits.jpg">
+    <script src="Loginpage.js"></script>
+    <title>Login</title>
+    <style>
+        body {
+            /* background-image: url('set-fruits-seeds-leaves.jpg'); */
+            background-image: url("Images/reiseuhu-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: 100% 150%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2 id="logh2">Jerry Online FruitShop</h2>
+    </center>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">LogIn Form</div>
+            <div class="title signup">SignUp Form</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+
+                <label for="login" class="slide login">LogIn</label>
+                <label for="signup" class="slide signup">SignUp</label>
+                <div class="slide-tab">
+
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form-inner">
+                <form action="FruitHomePage.html" method="post" onsubmit="return validate()" class="login">
+                    <div class="field">
+                        <input type="text" id="username" placeholder="Emailaddress">
+                    </div>
+                    <div class="field">
+                        <input type="password" id="password" placeholder="Passsword">
+                    </div>
+                    <div class="pass-link"><a href="#">Forgot Password?</a></div>
+                    <div class="field">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">Not a Member?<a href="#">SignUp Now</a></div>
+                    <div id="message" class="hidden">Incorrect username or password. Please try again.</div>
+                </form>
+                <form action="#" class="login" id="loginForm">
+                    <div class="field">
+                        <input type="text" placeholder="Emailaddress">
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Passsword">
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="ConfirmPasssword">
+                    </div>
+
+                    <div class="field">
+                        <input type="submit" value="SignUp" id="submitButton">
+                    </div>
+                    <div id="message" class="hidden">Incorrect username or password. Please try again.</div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const loginforms = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+        const passLink = document.querySelector("form .pass-link a");
+        const loginText = document.querySelector(".title-text .login");
+        const signupText = document.querySelector(".title-text .signup");
+
+
+        signupBtn.onclick = (() => {
+            loginforms.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+
+        });
+        loginBtn.onclick = (() => {
+            loginforms.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+            // window.alert("Welcome to my page!")
+            // location.replace("https://www.w3schools.com")
+        });
+        signupLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+        passLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+
+        //  Redirect page code
+        // const loginForm = document.getElementById('loginForm');
+        // const submitButton = document.getElementById('submitButton');
+
+        // //Add a submit event listener to the form
+        // loginForm.addEventListener('submit', function (e) {
+        //     // Prevent the default form submission behavior
+        //     e.preventDefault();
+
+        //     // Redirect to the next page when the form is submitted
+        //     window.location.href = 'FruitHomePage.html';
+        // });
+
+
+    </script>
+</body>
+
+</html>

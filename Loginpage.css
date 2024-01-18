@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    place-items: center;
+    display: grid;
+    height: 400px;
+    width: 100%;
+   
+}
+
+#logh2 {
+    text-align: center;
+    padding: 0px 12px 0px 11px;
+    font-size: xx-large;
+    margin: 0px 500px 10px 500px;
+    font-family: monospace;
+    font-style: italic;
+    box-shadow: 4px 4px 4px 4px;
+    color: rebeccapurple;
+    background-color: aliceblue;
+}
+
+.wrapper {
+    border-radius: 10px;
+    background: lightcyan;
+    padding: 50px;
+    max-width: 400px;
+    overflow: hidden;
+    margin-top: 15%;
+    box-shadow: 4px 4px 4px 4px;
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+
+}
+
+
+.wrapper .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    /* transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); */
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 30px 0px 10px 0px;
+    border: 2px solid gray;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    z-index: 1;
+    color: #fff;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    /* transition: all 0.6s ease; */
+}
+
+.slide-controls label.signup {
+    color: #000;
+
+}
+
+.slide-controls .slide-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    z-index: 0;
+    left: 0;
+    border-radius: 8px;
+    background: rgba(218, 8, 148, 0.89);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slide-tab {
+    left: 50%;
+}
+
+
+#signup:checked~.login {
+    color: #000;
+}
+
+#signup:checked~.signup {
+    color: #fff;
+    user-select: none;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+}
+
+.form-inner form .field {
+    height: 50px;
+    width: 100%;
+    margin: 20px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 90%;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 5px;
+    /* border-bottom: 2px; */
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+    /* padding-left: 10%; */
+}
+
+.form-inner form .signup-link {
+    /* padding-left: 10%; */
+    margin-top: 5px;
+    text-align: center;
+}
+
+form .field input[type="submit"] {
+    /* background: linear-gradient(rgb(17, 231, 17),blue,yellow); */
+    background: chartreuse;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+a {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10%;
+    /* margin-left: 25px; */
+}
+
+.hidden {
+    display: none;
+}
